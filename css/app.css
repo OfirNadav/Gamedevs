@@ -1,0 +1,12 @@
+/* app css stylesheet */
+.about {
+  display: flex;
+  justify-content: space-around; }
+
+.iphone, .android {
+  text-decoration: line-through; }
+
+.play {
+  font-size: 1.5em; }
+
+/*# sourceMappingURL=app.css.map */
