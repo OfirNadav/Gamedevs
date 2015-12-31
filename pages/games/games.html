@@ -1,0 +1,74 @@
+<section id="main">
+  <div class="container_16 clearfix">
+
+    <h2 class="luck">Games</h2>
+
+    <div class="clear"></div><div class="big_sep"></div><div class="clear"></div>
+
+    <div class="grid_8 game_box osans-s" ng-repeat="game in games">
+      <img ng-src="css/images/placeholders/{{::game.picture}}" alt=""/>
+      <h4 class="luck">{{::game.name}}</h4>
+      <p>{{::shortDesc(game)}}</p>
+      <button data-target="#myModal_{{::game.id}}" role="button" class="btn btn-primary modal-trigger" data-toggle="modal">+ Info</button>
+
+      <!-- Modal -->
+      <div id="myModal_{{::game.id}}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </div>
+          <div class="modal-body">
+            <div class="grid_11">
+              <img ng-src="css/images/placeholders/{{::game.picture}}" alt="" />
+              <h3 class="luck">{{::game.name}}</h3>
+              <p>{{::game.description}}</p>
+              <div class="clear"></div>
+              <div class="social_share">
+                <ul>
+                  <li>
+                    <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+                    <!--Facebook Like Button-->
+                    <div id="fb-root"></div>
+                    <script>(function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) return;
+                      js = d.createElement(s); js.id = id;
+                      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+                    <!--//Facebook-->
+                  </li>
+                  <li>
+                    <div class="g-plusone" data-size="medium"></div>
+                    <!-- Google Plus +1 Buttons -->
+                    <script type="text/javascript">
+                      (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                      })();
+                    </script>
+                    <!-- // Google Plus +1 Buttons -->
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                    <!-- Twitter  Button -->
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    <!-- // Twitter  Button -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid_4">
+              <p><span class="osans-s">Developer:</span><br/>{{::game.developer}}</p>
+              <p><span class="osans-s">Available on:</span><br/> PC / <span class="iphone"> iPhone</span>  / <span class="android"> Android</span></p>
+              <p><span class="osans-s">Release Date:</span><br/>{{::game.publishedAt | date : mediumDate}}</p>
+              <h5 class="luck play"><a ng-href="{{::game.url}}">Let's Play</a></h5>
+            </div>
+          </div>
+        </div>
+      <!-- //Modal -->
+      <h6><a ng-href="{{::game.url}}" class="luck" target="_blank">Let's Play</a></h6>
+    </div>
+
+  </div><!--container_16-->
+</section>
