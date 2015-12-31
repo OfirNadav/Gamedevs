@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>GameDevs</title>
+  <meta name="title" content="">
+  <meta name="description" content="">
+  <meta name="google-site-verification" content=""> <!-- http://google.com/webmasters -->
+  <meta name="author" content="Ofir Nadav">
+  <meta name="Copyright" content="Copyright Ofir Nadav 2013. All Rights Reserved.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/mosaic.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!--Main Stylesheet-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link href="//fonts.googleapis.com/css?family=Luckiest+Guy|Bitter:700|Open+Sans:400,600,600italic" rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-app>
+
+<!--Header Section-->
+<gd-menu></gd-menu>
+<!--//Header Section-->
+
+<div class="slider">
+  <div class="slide slide-1">
+    <img ng-src="css/images/placeholders/slider_1.jpg" alt=""/>
+  </div>
+  <div class="slide slide-2">
+    <img ng-src="css/images/placeholders/slider_2.jpg" alt=""/>
+  </div>
+  <div class="slide slide-3">
+    <img ng-src="css/images/placeholders/slider_3.jpg" alt=""/>
+  </div>
+</div>
+
+<div id="sep_bg"></div>
+
+<!-- MAIN CONTENT AND ANGULAR INJECTED VIEWS -->
+<main ng-view></main>
+<!-- //MAIN INJECTED  -->
+
+<!--Footer Section-->
+<gd-footer></gd-footer>
+<!--//Footer Section-->
+
+
+
+
+
+
+<!-- Asynchronous google analytics; this is the official snippet.
+   Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
+
+<script>
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+-->
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/vendor/jquery.watermark.min.js"></script>
+  <script src="js/vendor/mosaic.1.0.1.min.js"></script>
+  <script src="js/vendor/jquery.tweet.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="js/gamedevs-factory.js"></script>
+  <script src="js/app.js"></script>
+  <script src="pages/home/home.js"></script>
+  <script src="pages/games/games.js"></script>
+  <script src="pages/about/about.js"></script>
+  <script src="pages/contact/contact.js"></script>
+  <script src="components/gd-menu/gd-menu.js"></script>
+  <script src="components/gd-full-slider/gd-full-slider.js"></script>
+  <script src="components/gd-slim-slider/gd-slim-slider.js"></script>
+  <script src="components/gd-footer/gd-footer.js"></script>
+  <!-- my custom functions -->
+  <!--<script src="js/functions.js"></script>-->
+
+</body>
+</html>
